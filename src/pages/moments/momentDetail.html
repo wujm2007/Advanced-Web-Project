@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Detail</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name='md-close'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+  <ion-item>
+    <ion-avatar item-left>
+      <img src="assets/img/marty-avatar.png">
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
+
+  <img src="assets/img/advance-card-bttf.png">
+
+  <ion-card-content>
+    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+      <button ion-button color="primary" clear small icon-left>
+        <ion-icon name='thumbs-up'></ion-icon>
+        Like
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button color="primary" clear small icon-left (click)="doPrompt()">
+        <ion-icon name='text'></ion-icon>
+        Comment
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+    	<button ion-button clear small>Woody</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/avatar-ts-woody.png">
+      </ion-avatar>
+      <h2>Woody</h2>
+      <p>This town ain't big enough for the two of us!</p>
+      <ion-note item-right>3:43 pm</ion-note>
+    </ion-item>
+
+  </ion-list>
+
+</ion-card>
+
+</ion-content>
