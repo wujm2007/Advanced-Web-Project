@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController, ViewController } from 'ionic-angular';
+import { AlertController, ViewController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-momentDetail',
@@ -7,9 +7,11 @@ import { AlertController, ViewController } from 'ionic-angular';
 })
 
 export class ModalMomentDetailPage {
-  character;
+  moment;
 
-  constructor(public viewCtrl: ViewController, public alertCtrl: AlertController) { }
+  constructor(public viewCtrl: ViewController, public params: NavParams, public alertCtrl: AlertController) {
+    this.moment = this.params.get('moment');
+  }
 
   dismiss() {
     this.viewCtrl.dismiss();

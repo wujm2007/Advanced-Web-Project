@@ -5,6 +5,13 @@
 </ion-header>
 
 <ion-content class="list-avatar-page">
+  <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+  <ion-list>
+  <button ion-item *ngFor="let item of contacts" (click)="itemSelected(item.name)">
+    {{ item.name }}
+  </button>  
+  </ion-list> -->
 
   <ion-item-group *ngFor="let category of categorizedContacts.keys()">
 

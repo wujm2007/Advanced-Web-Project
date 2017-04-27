@@ -14,13 +14,13 @@
 <ion-card>
   <ion-item>
     <ion-avatar item-left>
-      <img src="assets/img/marty-avatar.png">
+      <img src="assets/img/{{moment.avatar}}">
     </ion-avatar>
-    <h2>Marty McFly</h2>
-    <p>November 5, 1955</p>
+    <h2>{{moment.author}}</h2>
+    <p>{{moment.time}}</p>
   </ion-item>
 
-  <img src="assets/img/advance-card-bttf.png">
+  <img src="assets/img/{{moment.image}}">
 
   <ion-card-content>
     <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
@@ -42,19 +42,20 @@
   </ion-row>
 
   <ion-row>
-    <ion-col>
-    	<button ion-button clear small>Woody</button>
-    </ion-col>
+    <ion-item>
+      <ion-icon name="heart" color="primary"></ion-icon>
+      <a *ngFor="let like of moment.likes" [href]=""> {{like}} </a>
+    </ion-item>
   </ion-row>
 
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let comment of moment.comments">
       <ion-avatar item-left>
-        <img src="assets/img/avatar-ts-woody.png">
+        <img src="assets/img/{{comment.avatar}}">
       </ion-avatar>
-      <h2>Woody</h2>
-      <p>This town ain't big enough for the two of us!</p>
-      <ion-note item-right>3:43 pm</ion-note>
+      <h2>{{comment.author}}</h2>
+      <p>{{comment.content}}</p>
+      <ion-note item-right>{{comment.time}}</ion-note>
     </ion-item>
 
   </ion-list>

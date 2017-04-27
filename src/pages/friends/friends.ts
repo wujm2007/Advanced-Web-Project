@@ -6,14 +6,35 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'friends.html'
 })
 export class FriendsPage {
-
-  categorizedContacts = getcategorizedContacts(CONTACTS);
+  contacts;
+  categorizedContacts;
 
   itemSelected(name: string) {
     console.log("Selected Item", name);
   }
 
+  /*
+  getItems(ev) {
+    this.initContacts();
+
+    var val = ev.target.value;
+
+    if (val && val.trim() != '') {
+      this.contacts = this.contacts.filter((item) => {
+        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      });
+      this.categorizedContacts = getcategorizedContacts(this.contacts);
+    }
+  }
+  */
+
+  initContacts() {
+      this.contacts = CONTACTS;
+      this.categorizedContacts = getcategorizedContacts(this.contacts);
+  }
+
   constructor(public navCtrl: NavController) {
+    this.initContacts();
   }
 }
 
