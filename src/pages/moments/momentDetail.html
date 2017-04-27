@@ -22,9 +22,7 @@
 
   <img src="assets/img/{{moment.image}}">
 
-  <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-  </ion-card-content>
+  <ion-card-content [innerHTML]="moment.content"> </ion-card-content>
 
   <ion-row>
     <ion-col>
