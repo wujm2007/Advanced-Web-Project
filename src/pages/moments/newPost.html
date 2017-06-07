@@ -13,11 +13,11 @@
 
 <ion-card>
   <ion-card-header>
-  <ion-textarea placeholder="Enter a description"></ion-textarea>
+  <ion-textarea placeholder="Enter a description" [(ngModel)]="content"></ion-textarea>
   </ion-card-header>
 
  <ion-item>
-      <button ion-button icon-only large outline color="royal">
+      <button ion-button icon-only large outline color="royal" (click)="takePhoto()">
         <ion-icon name="add"></ion-icon>
       </button>
   </ion-item>
@@ -42,12 +42,7 @@
   </ion-list>
 
     <ion-buttons end>
-      <button ion-button (click)="dismiss()">
-      Submit
-      </button>
+      <button ion-button (click)="post()"> Submit </button>
     </ion-buttons>
-
-
-
 
 </ion-content>

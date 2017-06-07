@@ -6,9 +6,14 @@ import {User} from '../entities/user';
 @Injectable()
 export class UserService {
 
-    private usersUrl = 'api/users';  // URL to web api
-    constructor(private http: Http) {
+    private usersUrl = 'api/users';
+
+    private handleError(error: any): Promise<any> {
+        console.error('An error occurred', error);
+        return Promise.reject(error.message || error);
     }
+
+    constructor(private http: Http) { }
 
     getUsers(): Promise<User[]> {
         return this.http.get(this.usersUrl)
@@ -17,8 +22,7 @@ export class UserService {
             .catch(this.handleError);
     }
 
-    private handleError(error: any): Promise<any> {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
+    getCurrentUser(): User {
+        return {"name": "吴老", "whatsup": "我会说中文", "avatar": "avatar-ts-woody.png"};
     }
 }

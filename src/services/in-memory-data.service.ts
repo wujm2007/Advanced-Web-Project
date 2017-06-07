@@ -61,6 +61,7 @@ export class InMemoryDataService implements InMemoryDbService {
 
         let moments = [
             {
+                id:0,
                 "author": "Marty McFly",
                 "avatar": "marty-avatar.png",
                 "time": "November 5, 1955",
@@ -80,6 +81,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 }]
             },
             {
+                id:1,
                 "author": "Sarah Connor",
                 "avatar": "sarah-avatar.png.jpeg",
                 "time": "May 12, 1984",
@@ -94,6 +96,7 @@ export class InMemoryDataService implements InMemoryDbService {
                 }]
             },
             {
+                id:2,
                 "author": "Dr. Ian Malcolm",
                 "avatar": "ian-avatar.png",
                 "time": "June 28, 1990",
